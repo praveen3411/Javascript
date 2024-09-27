@@ -42,11 +42,18 @@ currentResult = ((currentResult + 10) * 3) / 2 - 1;
 function CallFunction(resultone, resulttwo) {
   console.log(resultone);
 }
-
+ 
 CallFunction(currentResult);
 
 let userInput = 15;
 let result;
 result = ((18 + userInput) * 30) / 2 - 1;
-alert(result);
-alert(userInput);
+// alert(result);
+// alert(userInput);
+let variableone = 30;
+let variabletwo = 35;
+
+function Dataone(one, two) {
+  console.log(one * 50 + two);
+}
+Dataone(variableone, variabletwo);
