@@ -1,2 +1,2 @@
 # Javascript
-All About Javascript Revision
+All About Javascript
