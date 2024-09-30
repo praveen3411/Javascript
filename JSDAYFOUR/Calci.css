@@ -1,0 +1,19 @@
+
+#in,#bu{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border: 20px;
+    border-radius: 5px solid red;
+    padding: 20px;
+}
+#bu #addition-type,#substraction-type,#multiplication-type,#division-type{
+    background-color: black;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 2px;
+}
+h3{
+    text-align: center;
+}

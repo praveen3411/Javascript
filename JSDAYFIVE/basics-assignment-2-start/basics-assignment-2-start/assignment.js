@@ -9,6 +9,8 @@ function functionTwo(name) {
 functionTwo("Praveen Kumar");
 
 function threeStrings(string1, string2, string3) {
+  // We can use this in both ways.
+  let combinedStrings = `${string1} ${string2} ${string3}`
   return (
     "My name is " +
     string1 +
