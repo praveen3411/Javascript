@@ -14,14 +14,23 @@ function getAllfunctionOutput(operator, previousValue, ResultValue) {
   mainOutput(currentResult, DeclaredValue);
 }
 
+function findTheLogs(operationTypes, prevValue, numberedVAlue, finalValue) {
+  let logEntry = {
+    operation: operationTypes,
+    previousRes: prevValue,
+    addedResult: numberedVAlue,
+    results: finalValue,
+  };
+  logEntries.push(logEntry);
+  console.log(logEntries);
+}
 // Adding the values;
 function add() {
   const addValue = getInputData();
   const initialAddValue = currentResult;
   currentResult += addValue;
+  findTheLogs("ADD", initialAddValue, addValue, currentResult);
   getAllfunctionOutput("+", initialAddValue, addValue);
-  logEntries.push(addValue);
-  console.log(logEntries)
 }
 
 // Subtract.
@@ -29,6 +38,7 @@ function Sub() {
   const subValue = getInputData();
   const storesubinitialValue = currentResult;
   currentResult -= subValue;
+  findTheLogs("SUB", storesubinitialValue, subValue, currentResult);
   getAllfunctionOutput("-", storesubinitialValue, subValue);
 }
 
@@ -37,6 +47,7 @@ function multiply() {
   const multiplyValue = getInputData();
   const multiinitialStoreValue = currentResult;
   currentResult *= multiplyValue;
+  findTheLogs("MULTIPLY", multiinitialStoreValue, multiplyValue, currentResult);
   getAllfunctionOutput("*", multiinitialStoreValue, multiplyValue);
 }
 
@@ -44,7 +55,8 @@ function multiply() {
 function divison() {
   const divValue = getInputData();
   const storeDivValue = currentResult;
-  currentResult /=divValue;
+  currentResult /= divValue;
+  findTheLogs("DIVISION", storeDivValue, divValue, currentResult);
   getAllfunctionOutput("/", storeDivValue, divValue);
 }
 
