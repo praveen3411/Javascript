@@ -11,4 +11,3 @@ function mainOutput(result, text) {
   mainResult.textContent = result;
   CalciResult.textContent = text;
 }
-// this is the code for connecting all the buttons we catch the ideas and use document object model
