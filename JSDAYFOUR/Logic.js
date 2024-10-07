@@ -60,7 +60,6 @@ function divison() {
   getAllfunctionOutput("/", storeDivValue, divValue);
 }
 
-// Triggers event's for each function
 Addition.addEventListener("click", add);
 Substraction.addEventListener("click", Sub);
 Multiplication.addEventListener("click", multiply);
