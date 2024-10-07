@@ -66,5 +66,4 @@ Substraction.addEventListener("click", Sub);
 Multiplication.addEventListener("click", multiply);
 Division.addEventListener("click", divison);
 
-// Add Comments to code !
-/* Hello */
+
