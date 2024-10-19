@@ -32,35 +32,3 @@ function add() {
   findTheLogs("ADD", initialAddValue, addValue, currentResult);
   getAllfunctionOutput("+", initialAddValue, addValue);
 }
-
-// Subtract.
-function Sub() {
-  const subValue = getInputData();
-  const storesubinitialValue = currentResult;
-  currentResult -= subValue;
-  findTheLogs("SUB", storesubinitialValue, subValue, currentResult);
-  getAllfunctionOutput("-", storesubinitialValue, subValue);
-}
-
-// multiply
-function multiply() {
-  const multiplyValue = getInputData();
-  const multiinitialStoreValue = currentResult;
-  currentResult *= multiplyValue;
-  findTheLogs("MULTIPLY", multiinitialStoreValue, multiplyValue, currentResult);
-  getAllfunctionOutput("*", multiinitialStoreValue, multiplyValue);
-}
-
-// division
-function divison() {
-  const divValue = getInputData();
-  const storeDivValue = currentResult;
-  currentResult /= divValue;
-  findTheLogs("DIVISION", storeDivValue, divValue, currentResult);
-  getAllfunctionOutput("/", storeDivValue, divValue);
-}
-
-Addition.addEventListener("click", add);
-Substraction.addEventListener("click", Sub);
-Multiplication.addEventListener("click", multiply);
-Division.addEventListener("click", divison);
