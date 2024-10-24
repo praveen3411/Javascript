@@ -22,33 +22,42 @@ function storingLogs(typeoflog, prevlog, updatedlog, finalvalue) {
   console.log(storeLogs);
 }
 
-function add() {
+function withifelseCondtions(cr) {
   let addValue = takeInputValue();
   let addInitialValue = currentValue;
-  currentValue += addValue;
-  storingLogs("ADD", addInitialValue, addValue, currentValue);
-  operations("+", addInitialValue, addValue);
+  let mathOperator;
+  if (cr === "ADD") {
+    currentValue += addValue;
+    mathOperator = "+";
+  } else if (cr === "SUB") {
+    currentValue -= addValue;
+    mathOperator = "-";
+  } else if (cr === "MULTI") {
+    currentValue *= addValue;
+    mathOperator = "*";
+  } else {
+    currentValue /= addValue;
+    mathOperator = "/";
+  }
+
+  storingLogs(cr, addInitialValue, addValue, currentValue);
+  operations(mathOperator, addInitialValue, addValue);
+}
+
+function add() {
+  withifelseCondtions("ADD");
 }
 
 function sub() {
-  let subValue = takeInputValue();
-  let subinitialValue = currentValue;
-  currentValue -= subValue;
-  operations("-", subinitialValue, subValue);
+  withifelseCondtions("SUB");
 }
 
 function multi() {
-  let multiValue = takeInputValue();
-  let multiInitialValue = currentValue;
-  currentValue *= multiValue;
-  operations("x", multiInitialValue, multiValue);
+  withifelseCondtions("MULTI");
 }
 
 function div() {
-  let divValue = takeInputValue();
-  let divinitialValue = currentValue;
-  currentValue /= divValue;
-  operations("/", divinitialValue, divValue);
+  withifelseCondtions("DIV");
 }
 
 addButton.addEventListener("click", add);
