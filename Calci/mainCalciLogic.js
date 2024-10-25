@@ -23,27 +23,30 @@ function storingLogs(typeoflog, prevlog, updatedlog, finalvalue) {
 }
 
 function withifelseCondtions(cr) {
-  let addValue = takeInputValue();
-  let addInitialValue = currentValue;
-  let mathOperator;
-  if (cr === "ADD") {
-    currentValue += addValue;
-    mathOperator = "+";
-  } else if (cr === "SUB") {
-    currentValue -= addValue;
-    mathOperator = "-";
-  } else if (cr === "MULTI") {
-    currentValue *= addValue;
-    mathOperator = "*";
-  } else {
-    currentValue /= addValue;
-    mathOperator = "/";
+  if (cr !== "ADD" && cr !== "SUB" && cr !== "MULTI" && cr !== "DIV") {
+    return;
   }
-
-  storingLogs(cr, addInitialValue, addValue, currentValue);
-  operations(mathOperator, addInitialValue, addValue);
+  if (cr === "ADD" || cr === "SUB" || cr === "MULTI" || cr === "DIV") {
+    let addValue = takeInputValue();
+    let addInitialValue = currentValue;
+    let mathOperator;
+    if (cr === "ADD") {
+      currentValue += addValue;
+      mathOperator = "+";
+    } else if (cr === "SUB") {
+      currentValue -= addValue;
+      mathOperator = "-";
+    } else if (cr === "MULTI") {
+      currentValue *= addValue;
+      mathOperator = "*";
+    } else {
+      currentValue /= addValue;
+      mathOperator = "/";
+    }
+    storingLogs(cr, addInitialValue, addValue, currentValue);
+    operations(mathOperator, addInitialValue, addValue);
+  }
 }
-
 function add() {
   withifelseCondtions("ADD");
 }
