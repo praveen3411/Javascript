@@ -23,11 +23,11 @@ function storingLogs(typeoflog, prevlog, updatedlog, finalvalue) {
 }
 
 function withifelseCondtions(cr) {
-  if (cr !== "ADD" && cr !== "SUB" && cr !== "MULTI" && cr !== "DIV") {
+  let addValue = takeInputValue();
+  if (cr !== "ADD" && cr !== "SUB" && cr !== "MULTI" && cr !== "DIV" || !addValue === 0) {
     return;
   }
   if (cr === "ADD" || cr === "SUB" || cr === "MULTI" || cr === "DIV") {
-    let addValue = takeInputValue();
     let addInitialValue = currentValue;
     let mathOperator;
     if (cr === "ADD") {
