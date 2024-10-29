@@ -1,10 +1,10 @@
 const attackValue = 10;
 const monsterAttackValue = 14;
-let chosenMaxLife = 5;
-let currentMonsterHealth = chosenMaxLife;
-let currentPlayerHealth = chosenMaxLife;
+let chooseMaxLife = 5;
+let currentMonsterHealth = chooseMaxLife;
+let currentPlayerHealth = chooseMaxLife;
 
-adjustHealthBars(chosenMaxLife);
+adjustHealthBars(chooseMaxLife);
 
 function attackHandler() {
   const damage = dealMonsterDamage(attackValue);
